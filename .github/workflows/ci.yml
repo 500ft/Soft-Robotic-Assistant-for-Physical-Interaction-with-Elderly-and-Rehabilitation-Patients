@@ -1,0 +1,22 @@
+name: CI
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+    branches: [main]
+
+jobs:
+  literature-checks:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v5
+      - uses: actions/setup-python@v6
+        with:
+          python-version: "3.11"
+      - name: Compile analysis scripts
+        run: python -m compileall -q analysis
+      - name: Test the section parser
+        run: python -m unittest discover -s analysis/tests -v
+      - name: Check literature layer consistency
+        run: python analysis/check_literature_coverage.py

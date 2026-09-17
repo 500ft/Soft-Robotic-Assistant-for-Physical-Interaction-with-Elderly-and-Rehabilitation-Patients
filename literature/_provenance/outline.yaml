@@ -1,0 +1,49 @@
+topic: >-
+  Literature base for a compliant soft-robotic upper-body assistant (torso + two arms)
+  for physical interaction with elderly and rehabilitation patients.
+generated: 2026-09-17
+time_range: unlimited, weighted toward 2020-2026
+rationale: >-
+  Items are organized by DESIGN DECISION, not by academic subfield. Each item exists
+  because the senior design team has to make a choice there and needs evidence to
+  defend it in a design review.
+
+items:
+  - id: A1
+    name: Soft and compliant actuation capable of meaningful assistive torque
+    decision: What actuates the arm? Can any soft technology deliver useful force at human scale?
+  - id: A2
+    name: Series elastic and variable stiffness actuation (SEA / VSA / VIA)
+    decision: If fully soft cannot reach the torque target, what is the compliant-but-capable fallback?
+  - id: A3
+    name: Pneumatic artificial muscles and fluidic actuators at human scale
+    decision: Are PAMs/McKibben a viable arm actuator, and what is the real bandwidth/force/plumbing cost?
+  - id: B1
+    name: Structural design of soft and compliant humanoid torsos and arms
+    decision: How is a freestanding compliant upper body built so it supports load without becoming rigid?
+  - id: B2
+    name: Soft/compliant sensing for safe contact (tactile skins, proprioception, proximity)
+    decision: How does the robot know it is touching someone, given soft links hide their own state?
+  - id: C1
+    name: pHRI safety standards, injury biomechanics, and severity metrics
+    decision: What number does the test campaign have to beat, and where does that number come from?
+  - id: C2
+    name: Impact and contact safety test methods and benchmarks
+    decision: How is "safe under uncontrolled contact" actually measured in a lab?
+  - id: D1
+    name: Control of compliant arms for assistive physical contact
+    decision: Impedance/admittance, force control on soft plants, intent detection, assist-as-needed.
+  - id: E1
+    name: Rehabilitation robotics clinical evidence (upper limb, ROM, postural support)
+    decision: What assistive forces and protocols are clinically meaningful, so the spec is not invented?
+  - id: E2
+    name: Human-subject studies of perceived safety, approachability, and trust in soft robots
+    decision: How is "perceived approachability" measured with instruments that survive review?
+  - id: F1
+    name: Comparable systems - freestanding soft/compliant humanoids and assistive arms
+    decision: What has already been built, what did it achieve, and where did it fall short?
+
+execution:
+  batch_size: 11
+  items_per_agent: 1
+  output_dir: ./results

@@ -1,0 +1,38 @@
+# What each deep-research agent must return per paper.
+fields:
+  identity:
+    - name: citation
+      description: Authors, year, title, venue. Full enough for BibTeX.
+      detail_level: detailed
+    - name: doi_or_url
+      description: DOI preferred; arXiv/PMC/publisher URL otherwise. Must be real and resolvable.
+      detail_level: brief
+    - name: open_access
+      description: yes/no/partial - can the team read it without a paywall?
+      detail_level: brief
+
+  substance:
+    - name: what_it_shows
+      description: The actual contribution in one or two sentences. Not the abstract's marketing.
+      detail_level: moderate
+    - name: hard_numbers
+      description: >-
+        Quantities the design team can put in a spec table - force (N), torque (Nm), stiffness
+        (N/m or Nm/rad), bandwidth (Hz), mass (kg), pressure (bar), injury threshold, sample size,
+        effect size. If the paper has none, say so explicitly.
+      detail_level: detailed
+    - name: design_relevance
+      description: Which specific decision in this project it informs, and how.
+      detail_level: moderate
+
+  quality:
+    - name: evidence_grade
+      description: >-
+        A = validated on hardware with human subjects or standardized test;
+        B = hardware-validated, no humans; C = simulation or concept only; D = review/position.
+      detail_level: brief
+    - name: limitations
+      description: Why it might NOT transfer to a freestanding torso that a person leans on.
+      detail_level: moderate
+
+uncertain: []

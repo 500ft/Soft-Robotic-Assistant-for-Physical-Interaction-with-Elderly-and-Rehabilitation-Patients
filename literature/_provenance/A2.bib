@@ -1,0 +1,289 @@
+% A2 -- Series elastic, variable stiffness and variable impedance actuation
+% Every entry verified against Crossref (api.crossref.org); abstracts where quoted
+% were retrieved from OpenAlex (api.openalex.org) or from full text fetched directly.
+
+@inproceedings{haddadin2007crashtesting,
+  author    = {Haddadin, Sami and Albu-Sch{\"a}ffer, Alin and Hirzinger, Gerd},
+  title     = {Safety Evaluation of Physical Human-Robot Interaction via Crash-Testing},
+  booktitle = {Robotics: Science and Systems III},
+  year      = {2007},
+  pages     = {217--224},
+  address   = {Atlanta, GA, USA},
+  doi       = {10.15607/RSS.2007.III.028},
+  url       = {https://www.roboticsproceedings.org/rss03/p28.pdf},
+  note      = {Open access. HIC36 < 25 at 2 m/s TCP velocity vs EuroNCAP limit 650; HIC saturates with robot mass}
+}
+
+@inproceedings{haddadin2010elasticity,
+  author    = {Haddadin, Sami and Albu-Sch{\"a}ffer, Alin and Eiberger, Oliver and Hirzinger, Gerd},
+  title     = {New insights concerning intrinsic joint elasticity for safety},
+  booktitle = {Proceedings of the IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  year      = {2010},
+  pages     = {2181--2187},
+  address   = {Taipei, Taiwan},
+  doi       = {10.1109/IROS.2010.5652037},
+  note      = {Intrinsic joint elasticity does not reduce HIC or impact forces vs conventional actuation with some joint elasticity}
+}
+
+@inproceedings{pratt1995series,
+  author    = {Pratt, Gill A. and Williamson, Matthew M.},
+  title     = {Series elastic actuators},
+  booktitle = {Proceedings 1995 IEEE/RSJ International Conference on Intelligent Robots and Systems. Human Robot Interaction and Cooperative Robots},
+  year      = {1995},
+  volume    = {1},
+  pages     = {399--406},
+  address   = {Pittsburgh, PA, USA},
+  doi       = {10.1109/IROS.1995.525827}
+}
+
+@article{paine2014design,
+  author  = {Paine, Nicholas and Oh, Sehoon and Sentis, Luis},
+  title   = {Design and Control Considerations for High-Performance Series Elastic Actuators},
+  journal = {IEEE/ASME Transactions on Mechatronics},
+  year    = {2014},
+  volume  = {19},
+  number  = {3},
+  pages   = {1080--1091},
+  month   = jun,
+  doi     = {10.1109/TMECH.2013.2270435}
+}
+
+@inproceedings{paine2012prismatic,
+  author    = {Paine, Nicholas and Sentis, Luis},
+  title     = {A new prismatic series elastic actuator with compact size and high performance},
+  booktitle = {2012 IEEE International Conference on Robotics and Biomimetics (ROBIO)},
+  year      = {2012},
+  month     = dec,
+  pages     = {1759--1766},
+  doi       = {10.1109/ROBIO.2012.6491222},
+  url       = {https://sites.utexas.edu/hcrl/files/2016/01/prismatic-sea-paine.pdf},
+  note      = {UT-SEA companion paper; specification table read directly from this PDF: 1013 g, 848 N continuous, 2800 N intermittent, 278 N/mm, 94 W/kg, 77 percent mechanical efficiency}
+}
+
+@phdthesis{paine2014thesis,
+  author = {Paine, Nicholas Arden},
+  title  = {High-Performance Series Elastic Actuation},
+  school = {The University of Texas at Austin},
+  year   = {2014},
+  url    = {https://sites.utexas.edu/hcrl/wp-content/uploads/sites/3888/2016/01/nick-paine-thesis-dissertation-2014.pdf},
+  note   = {Valkyrie elbow SEA: 13 Hz passive torque bandwidth extended to 70 Hz closed loop; raising bandwidth 30 to 82 Hz raised power 27 W to 97 W}
+}
+
+@article{zinn2004actuation,
+  author  = {Zinn, Michael and Roth, Bernard and Khatib, Oussama and Salisbury, J. Kenneth},
+  title   = {A New Actuation Approach for Human Friendly Robot Design},
+  journal = {The International Journal of Robotics Research},
+  year    = {2004},
+  volume  = {23},
+  number  = {4--5},
+  pages   = {379--398},
+  doi     = {10.1177/0278364904042193},
+  url     = {https://cs.stanford.edu/group/manips/publications/pdfs/Zinn_2004_IJRR.pdf},
+  note    = {DM2 distributed macro-mini; effective joint inertia reduced by almost 10x; PUMA 560 at 1 m/s gives HIC > 500}
+}
+
+@article{bicchi2004softarm,
+  author  = {Bicchi, Antonio and Tonietti, Giovanni},
+  title   = {Fast and ``Soft-Arm'' Tactics: Dealing with the Safety-Performance Tradeoff in Robot Arms Design and Control},
+  journal = {IEEE Robotics \& Automation Magazine},
+  year    = {2004},
+  volume  = {11},
+  number  = {2},
+  pages   = {22--33},
+  month   = jun,
+  doi     = {10.1109/MRA.2004.1310939}
+}
+
+@incollection{bicchi2005variable,
+  author    = {Bicchi, Antonio and Tonietti, Giovanni and Bavaro, Michele and Piccigallo, Marco},
+  title     = {Variable Stiffness Actuators for Fast and Safe Motion Control},
+  booktitle = {Robotics Research: The Eleventh International Symposium},
+  series    = {Springer Tracts in Advanced Robotics},
+  publisher = {Springer},
+  year      = {2005},
+  pages     = {527--536},
+  doi       = {10.1007/11008941_56},
+  url       = {https://www.centropiaggio.unipi.it/sites/default/files/anthropic-ISRR03.pdf},
+  note      = {Worked example: Mrot 1.2 kg, Mlink 0.1 kg, cover 5 kN/m, head 4 kg; HIC 100 implies v_safe about 2 m/s; optimum transmission stiffness exists}
+}
+
+@article{veneman2006bowden,
+  author  = {Veneman, Jan F. and Ekkelenkamp, Ralf and Kruidhof, Rob and van der Helm, Frans C. T. and van der Kooij, Herman},
+  title   = {A Series Elastic- and Bowden-Cable-Based Actuation System for Use as Torque Actuator in Exoskeleton-Type Robots},
+  journal = {The International Journal of Robotics Research},
+  year    = {2006},
+  volume  = {25},
+  number  = {3},
+  pages   = {261--281},
+  month   = mar,
+  doi     = {10.1177/0278364906063829},
+  note    = {11 Hz force bandwidth full range (4 Hz required), 20 Hz small range (12 Hz required); 0.7 Nm residual impedance peaks, under 2.5 percent of max force output}
+}
+
+@article{kong2012rotary,
+  author  = {Kong, Kyoungchul and Bae, Joonbum and Tomizuka, Masayoshi},
+  title   = {A Compact Rotary Series Elastic Actuator for Human Assistive Systems},
+  journal = {IEEE/ASME Transactions on Mechatronics},
+  year    = {2012},
+  volume  = {17},
+  number  = {2},
+  pages   = {288--297},
+  month   = apr,
+  doi     = {10.1109/TMECH.2010.2100046},
+  note    = {Includes experiments with a human subject; worm gear friction corrupts the nominal torque amplification ratio}
+}
+
+@article{yu2015rehabilitation,
+  author  = {Yu, Haoyong and Huang, Sunan and Chen, Gong and Pan, Yongping and Guo, Zhao},
+  title   = {Human--Robot Interaction Control of Rehabilitation Robots With Series Elastic Actuators},
+  journal = {IEEE Transactions on Robotics},
+  year    = {2015},
+  volume  = {31},
+  number  = {5},
+  pages   = {1089--1100},
+  month   = oct,
+  doi     = {10.1109/TRO.2015.2457314},
+  note    = {Dual mode human-in-charge and force control with a stability proof under physical interaction; walking experiments}
+}
+
+@article{wolf2016review,
+  author  = {Wolf, Sebastian and Grioli, Giorgio and Eiberger, Oliver and Friedl, Werner and Grebenstein, Markus and H{\"o}ppner, Hannes and Burdet, Etienne and Caldwell, Darwin G. and Carloni, Raffaella and Catalano, Manuel G. and Lefeber, Dirk and Stramigioli, Stefano and Tsagarakis, Nikos and Van Damme, Michael and Van Ham, Ronald and Vanderborght, Bram and Visser, Ludo C. and Bicchi, Antonio and Albu-Sch{\"a}ffer, Alin},
+  title   = {Variable Stiffness Actuators: Review on Design and Components},
+  journal = {IEEE/ASME Transactions on Mechatronics},
+  year    = {2016},
+  volume  = {21},
+  number  = {5},
+  pages   = {2418--2430},
+  month   = oct,
+  doi     = {10.1109/TMECH.2015.2501019},
+  url     = {https://arpi.unipi.it/retrieve/handle/11568/842829/738859/VIA_review.pdf},
+  note    = {Design contradiction: size, weight and cost against output power, potential energy, stiffness range, efficiency and accuracy}
+}
+
+@article{vanderborght2013review,
+  author  = {Vanderborght, Bram and Albu-Schaeffer, Alin and Bicchi, Antonio and Burdet, Etienne and Caldwell, Darwin G. and Carloni, Raffaella and Catalano, Manuel and Eiberger, Oliver and Friedl, Werner and Ganesh, Gowrishankar and Garabini, Manolo and Grebenstein, Markus and Grioli, Giorgio and Haddadin, Sami and Hoppner, Hannes and Jafari, Amir and Laffranchi, Matteo and Lefeber, Dirk and Petit, Florian and Stramigioli, Stefano and Tsagarakis, Nikos and Van Damme, Michael and Van Ham, Ronald and Visser, Ludo C. and Wolf, Sebastian},
+  title   = {Variable impedance actuators: A review},
+  journal = {Robotics and Autonomous Systems},
+  year    = {2013},
+  volume  = {61},
+  number  = {12},
+  pages   = {1601--1614},
+  month   = dec,
+  doi     = {10.1016/j.robot.2013.06.009},
+  url     = {https://www.centropiaggio.unipi.it/sites/default/files/2013_VABBCCCEFGGGGHHJLLPSTVVVW_RAS.pdf},
+  note    = {Principal VIACTORS review; taxonomy only, no performance data}
+}
+
+@article{grioli2015uservsa,
+  author  = {Grioli, Giorgio and Wolf, Sebastian and Garabini, Manolo and Catalano, Manuel and Burdet, Etienne and Caldwell, Darwin and Carloni, Raffaella and Friedl, Werner and Grebenstein, Markus and Laffranchi, Matteo and Lefeber, Dirk and Stramigioli, Stefano and Tsagarakis, Nikos and van Damme, Michael and Vanderborght, Bram and Albu-Schaeffer, Alin and Bicchi, Antonio},
+  title   = {Variable stiffness actuators: The user's point of view},
+  journal = {The International Journal of Robotics Research},
+  year    = {2015},
+  volume  = {34},
+  number  = {6},
+  pages   = {727--743},
+  doi     = {10.1177/0278364914566515},
+  note    = {Proposes a standard VSA datasheet; use as the specification checklist when selecting a VSA}
+}
+
+@inproceedings{catalano2011cubebot,
+  author    = {Catalano, Manuel G. and Grioli, Giorgio and Garabini, Manolo and Bonomo, Fabio and Mancini, Michele and Tsagarakis, Nikolaos and Bicchi, Antonio},
+  title     = {{VSA-CubeBot}: A modular variable stiffness platform for multiple degrees of freedom robots},
+  booktitle = {Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2011},
+  pages     = {5090--5095},
+  address   = {Shanghai, China},
+  doi       = {10.1109/ICRA.2011.5980457},
+  note      = {Low cost as the primary design goal; five units chained into an arm}
+}
+
+@article{albuschaffer2007lightweight,
+  author  = {Albu-Sch{\"a}ffer, Alin and Haddadin, Sami and Ott, Christian and Stemmer, Andreas and Wimb{\"o}ck, Thomas and Hirzinger, Gerd},
+  title   = {The {DLR} lightweight robot: design and control concepts for robots in human environments},
+  journal = {Industrial Robot: An International Journal},
+  year    = {2007},
+  volume  = {34},
+  number  = {5},
+  pages   = {376--385},
+  doi     = {10.1108/01439910710774386},
+  note    = {Load-to-weight ratio 1:1; joint torque sensing plus impedance control; became the KUKA LBR iiwa}
+}
+
+@article{haddadin2009requirements,
+  author  = {Haddadin, Sami and Albu-Sch{\"a}ffer, Alin and Hirzinger, Gerd},
+  title   = {Requirements for Safe Robots: Measurements, Analysis and New Insights},
+  journal = {The International Journal of Robotics Research},
+  year    = {2009},
+  volume  = {28},
+  number  = {11--12},
+  pages   = {1507--1527},
+  doi     = {10.1177/0278364909343970},
+  note    = {Journal extension of the crash-test work; adds quasi-static constrained impact, a serious threat even for low-inertia robots}
+}
+
+@article{vanham2009compliant,
+  author  = {Van Ham, Ronald and Sugar, Thomas G. and Vanderborght, Bram and Hollander, Kevin W. and Lefeber, Dirk},
+  title   = {Compliant actuator designs},
+  journal = {IEEE Robotics \& Automation Magazine},
+  year    = {2009},
+  volume  = {16},
+  number  = {3},
+  pages   = {81--94},
+  month   = sep,
+  doi     = {10.1109/MRA.2009.933629},
+  note    = {Four-way classification: equilibrium-controlled, antagonistic-controlled, structure-controlled and mechanically controlled stiffness}
+}
+
+@inproceedings{wolf2011fsj,
+  author    = {Wolf, Sebastian and Eiberger, Oliver and Hirzinger, Gerd},
+  title     = {The {DLR} {FSJ}: Energy based design of a variable stiffness joint},
+  booktitle = {Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2011},
+  pages     = {5082--5089},
+  address   = {Shanghai, China},
+  doi       = {10.1109/ICRA.2011.5980303},
+  note      = {Floating Spring Joint for the first four axes of the DLR Hand Arm System; includes a blunt impact robustness test}
+}
+
+@inproceedings{grebenstein2011handarm,
+  author    = {Grebenstein, Markus and Albu-Sch{\"a}ffer, Alin and Bahls, Thomas and Chalon, Maxime and Eiberger, Oliver and Friedl, Werner and Gruber, Robin and Haddadin, Sami and Hagn, Ulrich and Haslinger, Robert and H{\"o}ppner, Hannes and J{\"o}rg, Stefan and Nickl, Mathias and Nothhelfer, Alexander and Petit, Florian and Reill, Josef and Seitz, Nikolaus and Wimb{\"o}ck, Thomas and Wolf, Sebastian and W{\"u}sthoff, Tilo and Hirzinger, Gerd},
+  title     = {The {DLR} hand arm system},
+  booktitle = {Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2011},
+  pages     = {3175--3182},
+  address   = {Shanghai, China},
+  doi       = {10.1109/ICRA.2011.5980371},
+  note      = {52 motors; passive compliance protects the robot structure and drivetrain, a distinct claim from protecting the human}
+}
+
+@inproceedings{tonietti2005vsaii,
+  author    = {Tonietti, Giovanni and Schiavi, Riccardo and Bicchi, Antonio},
+  title     = {Design and Control of a Variable Stiffness Actuator for Safe and Fast Physical Human/Robot Interaction},
+  booktitle = {Proceedings of the 2005 IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2005},
+  pages     = {526--531},
+  doi       = {10.1109/ROBOT.2005.1570172},
+  note      = {VSA-II; hardware realisation of the Bicchi/Tonietti co-design theory on a one-link arm}
+}
+
+@article{plooij2017clutched,
+  author  = {Plooij, Michiel and Wolfslag, Wouter and Wisse, Martijn},
+  title   = {Clutched Elastic Actuators},
+  journal = {IEEE/ASME Transactions on Mechatronics},
+  year    = {2017},
+  volume  = {22},
+  number  = {2},
+  pages   = {739--750},
+  month   = apr,
+  doi     = {10.1109/TMECH.2017.2657224},
+  note    = {Motivated by energy consumption, peak torque and peak power rather than safety; designs trending to more clutches and springs}
+}
+
+@inproceedings{plooij2015bicpea,
+  author    = {Plooij, Michiel and van Nunspeet, Marvin and Wisse, Martijn and Vallery, Heike},
+  title     = {Design and evaluation of the Bi-directional Clutched Parallel Elastic Actuator ({BIC-PEA})},
+  booktitle = {Proceedings of the IEEE International Conference on Robotics and Automation (ICRA)},
+  year      = {2015},
+  pages     = {1002--1009},
+  doi       = {10.1109/ICRA.2015.7139299}
+}
