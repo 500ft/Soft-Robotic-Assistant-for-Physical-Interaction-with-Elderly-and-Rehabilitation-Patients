@@ -3,7 +3,7 @@
 Ordered by dependency. Each phase unblocks the next; items within a phase can run in
 parallel. Nothing here requires hardware until Phase 2.
 
-## Phase 0 — Desk work, this week
+## Phase 0 — Desk work, this week WTF IS THIS
 
 - [ ] **Design around the one patent that blocks.** GB2622575B (Bioliberty, priority
   2022-09-11) claims estimating a soft actuator's volume, shape, displacement and delivered
