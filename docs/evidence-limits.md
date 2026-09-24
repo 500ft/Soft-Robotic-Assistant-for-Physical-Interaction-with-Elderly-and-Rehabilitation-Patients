@@ -67,6 +67,41 @@ Recorded rather than quietly fixed, because each one would have survived into a 
 | Wong et al. treated as a preprint | Published, **T-ASE 21:3205–3215, 2024**. |
 | Paine & Sentis prismatic SEA venue guessed | **ROBIO 2012, pp. 1759–1766**, confirmed via Crossref. |
 
+## Citation traps caught in the second pass (2026-09-24)
+
+An externally supplied prior-art list of 52 items was verified before ingest. **None were
+fabricated**, but 14 carried metadata errors. The ones that would have survived into a
+report:
+
+| What was wrong | What is correct |
+|---|---|
+| "Jain et al. 2013" for the PR2 whole-arm contact study | **Grice et al. 2013** — Advait Jain is third author. Especially dangerous because Jain has a *separate real* 2013 whole-arm tactile paper in IJRR, so the wrong citation looks right. |
+| RI-MAN "demonstrated lifting and holding a human-sized body" | It lifted a **doll**. Real title: *Development and Evaluation of a Human-interactive Robot Platform "RI-MAN"*, J. Robotics Soc. Japan 25(4):554–565. |
+| "EmArm: Whole-Arm Tactile Sensing and Adaptive Robotic Manipulation" | **No paper has that title.** Real: Tang et al., *Embodied sensorimotor integration for whole-arm tactile sensing and adaptive robotic manipulation*, Nature Sensors 1(8):681–690. |
+| Baloo cited as a published paper | **arXiv preprint 2409.08420v2.** Submitted to T-Mech; no journal version exists. |
+| "223 ms end-to-end safety decision latency" | The 223 ms is **edge-LLM inference time on a laptop**; the total control loop is ≤240 ms. No human subjects — validated on an instrumented prosthetic leg. |
+| CN110812124A assignee per Google Patents | **Shanghai University.** Google Patents is wrong. Filed 2019, not 2020. |
+| CN112263435B assignee per Google Patents | **Henan Polytechnic University**, not "Henan University of Technology" — a different institution. B-grant published 2023, not 2020. |
+| US9956130B2 modes "assistant/active/resistive" | **Passive**/active/resistive; resistance comes from a variable damper. |
+| ISO/TR 23482-1 and -2 titles | Both are parts of an *"Robotics — Application of ISO 13482"* series, not the standalone titles quoted. |
+| "Assist-as-Needed Control of a Soft Rehabilitation Robot" described as general-purpose | It is a **finger** robot (Besharati et al., Eur. J. Control 86:101395). |
+| Wang & Xu 2021 as six PAMs | Six PAMs **plus a central linear electric motor**; EMG is assessment, not control. |
+| Yap et al. 2017 implied patient testing | **5 healthy participants**, despite "Hand Impaired Patients" in the title. |
+
+### Robertson 2017 reconciled
+
+Two sources quoted this paper with different figures — 112 N and 18 N·m — and both are
+correct because they describe different devices. From Table 2 at 200 kPa:
+
+| Device | Output |
+|---|---|
+| Single soft pneumatic actuator | 26 N |
+| SPA 4Pack (four in parallel) | **112 N** (model predicted 122 N; measured 8.2% low) |
+| Multi-DoF platform, four packs | **468 N cumulative, 18.00 N·m** blocked moment, ±5° travel |
+
+Quote the device, not just the number. A 2019 correction exists but changes an equation
+sign only, no values.
+
 ## Do not quote until someone opens the PDF
 
 | Figure | Problem |
@@ -83,11 +118,25 @@ Recorded rather than quietly fixed, because each one would have survived into a 
 
 ## Unverified and load-bearing
 
-Two open items that the safety argument rests on:
+1. **Whether ISO 10218-2:2025 kept Table A.2 unchanged.** Still open, and now the top item.
+2. **Whether ISO/FDIS 13482 edition 2 publishes contact limits.** The revision reached FDIS
+   stage 50.20 with the ballot initiated 2026-09-15 and could publish during this project.
+   If edition 2 carries limits, the import argument below is replaced by direct compliance.
+   Highest-value open question in this repository.
 
-1. **Whether ISO 10218-2:2025 kept Table A.2 unchanged.** Top open item.
-2. **ISO 13482's "no internationally recognised impact data" clause.** Could not be
-   fetched verbatim, and it is the sentence the entire import argument depends on.
+### Resolved 2026-09-24
+
+**ISO 13482's own admission is now confirmed verbatim** from the standard's abstract:
+
+> "no exhaustive and internationally recognized data (e.g. pain or injury limits) exist at
+> the time of publication"
+
+This was previously the repository's most load-bearing unverified claim — the sentence the
+entire ISO 14971 import argument depends on. It is now primary-sourced.
+
+Also confirmed verbatim, IEC 80601-2-78's exclusion list reads "personal care ROBOTS (use
+ISO 13482)", closing the standards circle from the other side. And ISO/FDIS 13482 edition 2
+**keeps the medical exclusion**, so the gap survives the revision.
 
 ## Modelled, not measured
 
@@ -99,6 +148,14 @@ Two open items that the safety argument rests on:
 - The **20–40 kPa interface pressure** figure quoted for soft wearable devices describes
   what those devices do. It is **not** a validated safety threshold for aged skin.
 
+## Standards access
+
+NYU's mechanical engineering standards guide lists only **Knovel and ASTM Compass** — no
+ISO or IEC access is evidenced, so do not assume the library route works. Full set at list
+price is **CHF 1,303**. Free ISO Online Browsing Platform previews expose the scope clauses,
+which covers most citation needs. If buying exactly one document, buy **ISO/TR 23482-2**
+(CHF 204) before ISO 13482 itself.
+
 ## Coverage limits
 
 Several agents exhausted a shared web-search budget near the end of their runs and
@@ -109,6 +166,13 @@ blocked, and the source was excluded rather than reported unverified.
 
 Four C2 entries carry explicit `UNVERIFIED-CONTENT` flags: bibliographic record confirmed,
 full text unread. One entry (Jacobs & Reiser) has full text read but an unverifiable venue.
+
+In the second pass, four G2 references were paywalled and **not read** — Polygerinos 2015,
+Liu 2020, Besharati 2025, Tang 2026 — and every number attached to them is marked
+UNVERIFIED rather than repeated. The G3 agent lost web search partway and navigated by
+direct URL and ISO's TC 299 committee catalogue instead; it lists eight items it could not
+determine. Patent grades use a separate scale: **P-VERIFIED** (number resolves and matches),
+**P-PARTIAL** (resolves, metadata differs), **P-NOTFOUND**, **P-WRONG**.
 
 ## Two INFERRED requirement cells
 

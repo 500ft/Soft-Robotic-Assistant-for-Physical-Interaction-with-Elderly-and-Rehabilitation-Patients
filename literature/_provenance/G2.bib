@@ -1,0 +1,280 @@
+% G2 — verification pass on a 21-item LLM-generated citation list
+% Every entry below was resolved through Crossref / OpenAlex / Unpaywall / Europe PMC /
+% the arXiv API or publisher metadata on 2026-09-24. Notes record what was corrected and
+% which numbers were read from a fetched full text versus left UNVERIFIED.
+% No entry was graded NOT FOUND, so all 21 appear here.
+
+@article{nanavati2024physically,
+  author  = {Nanavati, Amal and Ranganeni, Vinitha and Cakmak, Maya},
+  title   = {Physically Assistive Robots: A Systematic Review of Mobile and Manipulator Robots That Physically Assist People with Disabilities},
+  journal = {Annual Review of Control, Robotics, and Autonomous Systems},
+  volume  = {7},
+  number  = {1},
+  pages   = {123--147},
+  year    = {2024},
+  doi     = {10.1146/annurev-control-062823-024352},
+  note    = {VERIFIED. Screening claim confirmed from the PMC full text (PMC12978752): 1,981 papers screened, 135 after title/abstract screening, 87 included. Online-first 2023-11-21; volume year 2024.}
+}
+
+@misc{johnson2024baloo,
+  author       = {Johnson, Curtis C. and Clawson, Andrew and Killpack, Marc D.},
+  title        = {Baloo: A Large-Scale Hybrid Soft Robotic Torso for Whole-Arm Manipulation},
+  year         = {2024},
+  eprint       = {2409.08420},
+  archiveprefix = {arXiv},
+  primaryclass = {cs.RO},
+  url          = {https://arxiv.org/abs/2409.08420},
+  note         = {PARTIAL: preprint only (v1 2024-09-12, v2 2025-03-13), comments field states "Submitted to IEEE Transactions on Mechatronics for review"; no journal version in Crossref or OpenAlex as of 2026-09-24. Full text fetched: 19 kg end-effector payload; 410 kPa regulated max vs 615 kPa theoretical burst (SF 1.5); joint masses 1.65/2.03/4.63 kg; 24 pressure channels at 20 Hz; 30 trials, 100 percent success; uncontrolled joint damping ratio 0.0015.}
+}
+
+@article{odashima2007riman,
+  author  = {Odashima, Tadashi and Onishi, Masaki and Tahara, Kenji and Mukai, Toshiharu and Hirano, Shinya and Luo, Zhi Wei and Hosoe, Shigeyuki},
+  title   = {Development and Evaluation of a Human-interactive Robot Platform "{RI-MAN}"},
+  journal = {Journal of the Robotics Society of Japan},
+  volume  = {25},
+  number  = {4},
+  pages   = {554--565},
+  year    = {2007},
+  doi     = {10.7210/jrsj.25.554},
+  note    = {PARTIAL: cited title was "Development and Evaluation of the Human-Interactive Robot RI-MAN" and the venue was blank. J-Stage abstract fetched: RI-MAN "demonstrated the high ability to carry up and hold a doll softly and safely" -- a DOLL, not a human-sized body. Mass, DOF and sensor counts UNVERIFIED.}
+}
+
+@inproceedings{mukai2010riba,
+  author    = {Mukai, Toshiharu and Hirano, Shinya and Nakashima, Hiromichi and Kato, Yo and Sakaida, Yuki and Guo, Shijie and Hosoe, Shigeyuki},
+  title     = {Development of a nursing-care assistant robot {RIBA} that can lift a human in its arms},
+  booktitle = {2010 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages     = {5996--6001},
+  year      = {2010},
+  publisher = {IEEE},
+  doi       = {10.1109/IROS.2010.5651735},
+  note      = {VERIFIED. Abstract fetched via OpenAlex: "we succeeded in transferring a human from a bed to a wheelchair and back" and "Experiments including the transfer of humans are also reported." Lift capacity in kg is NOT in this paper (the 61 kg / 80 kg figures come from RIKEN press releases, see F1).}
+}
+
+@inproceedings{mukai2011tactile,
+  author    = {Mukai, Toshiharu and Hirano, Shinya and Yoshida, Morio and Nakashima, Hiromichi and Guo, Shijie and Hayakawa, Yoshikazu},
+  title     = {Tactile-based motion adjustment for the nursing-care assistant robot {RIBA}},
+  booktitle = {2011 IEEE International Conference on Robotics and Automation (ICRA)},
+  pages     = {5435--5441},
+  year      = {2011},
+  publisher = {IEEE},
+  doi       = {10.1109/ICRA.2011.5979559},
+  note      = {VERIFIED. Experiments used a lifesize DUMMY, not a human.}
+}
+
+@inproceedings{mukai2011wholebody,
+  author    = {Mukai, Toshiharu and Hirano, Shinya and Yoshida, Morio and Nakashima, Hiromichi and Guo, Shijie and Hayakawa, Yoshikazu},
+  title     = {Whole-body contact manipulation using tactile information for the nursing-care assistant robot {RIBA}},
+  booktitle = {2011 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages     = {2445--2451},
+  year      = {2011},
+  publisher = {IEEE},
+  doi       = {10.1109/IROS.2011.6094403},
+  note      = {VERIFIED. A duplicate Crossref stub exists under 10.1109/IROS.2011.6048049 with no pages; use 6094403. Design lesson: near-flat finite-area contact surfaces chosen to reduce contact pressure, with per-region force/pressure patterns preserved via tactile feedback.}
+}
+
+@inproceedings{grice2013wholearm,
+  author    = {Grice, Phillip M. and Killpack, Marc D. and Jain, Advait and Vaish, Sarvagya and Hawke, Jeffrey and Kemp, Charles C.},
+  title     = {Whole-arm tactile sensing for beneficial and acceptable contact during robotic assistance},
+  booktitle = {2013 IEEE 13th International Conference on Rehabilitation Robotics (ICORR)},
+  pages     = {1--8},
+  year      = {2013},
+  publisher = {IEEE},
+  doi       = {10.1109/ICORR.2013.6650464},
+  note      = {PARTIAL: cited as "Jain et al., 2013" -- WRONG FIRST AUTHOR, Jain is third. Full text fetched from the Georgia Tech repository: 2 users with motor impairments (incl. Henry Evans, quadriplegia, in his own bed: blanket pull and face wipe) plus 8 able-bodied participants. First link to violate the safety margin: forearm 35.74 percent, gripper palm 46.32 percent. Contact force in newtons is NOT reportable -- the taxel output "neither allows for direct interpretation as newtons of total force nor pascals of pressure."}
+}
+
+@inproceedings{madan2025prioritouch,
+  author    = {Madan, Rishabh and Lin, Jiawei and Goel, Mahika and Li, Amber and Xie, Angchen and Liang, Xiaoyu and Lee, Marcus and Guo, Justin and Thakkar, Pranav N. and Banerjee, Rohan and Barreiros, Jose and Tsui, Kate and Silver, Tom and Bhattacharjee, Tapomayukh},
+  title     = {PrioriTouch: Adapting to User Contact Preferences for Whole-Arm Physical Human-Robot Interaction},
+  booktitle = {Conference on Robot Learning (CoRL)},
+  year      = {2025},
+  eprint    = {2509.18447},
+  archiveprefix = {arXiv},
+  url       = {https://arxiv.org/abs/2509.18447},
+  note      = {VERIFIED. Full author list read off the fetched PDF (Cornell + Toyota Research Institute); the arXiv API listing truncates and drops Amber Li. Preference survey n=98 (ages 32-77); real-robot bed-bathing study n=8 without visible mobility limitations, 7/8 preferred the method over the heuristic-priority baseline. Platform: Kinova Gen3 with distributed tactile sensing; RCareWorld simulation.}
+}
+
+@inproceedings{madan2024rabbit,
+  author    = {Madan, Rishabh and Valdez, Skyler and Kim, David and Fang, Sujie and Zhong, Luoyan and Virtue, Diego T. and Bhattacharjee, Tapomayukh},
+  title     = {{RABBIT}: A Robot-Assisted Bed Bathing System with Multimodal Perception and Integrated Compliance},
+  booktitle = {Proceedings of the 2024 ACM/IEEE International Conference on Human-Robot Interaction (HRI '24)},
+  pages     = {472--481},
+  year      = {2024},
+  publisher = {ACM},
+  doi       = {10.1145/3610977.3634989},
+  note      = {PARTIAL: cited title omitted "A ... System". Participant claim CONFIRMED from the fetched arXiv abstract (2401.15159v2): "a user study with 12 participants, including one participant with severe mobility limitations". Force values UNVERIFIED.}
+}
+
+@article{gu2024vttb,
+  author  = {Gu, Yijun and Demiris, Yiannis},
+  title   = {{VTTB}: A Visuo-Tactile Learning Approach for Robot-Assisted Bed Bathing},
+  journal = {IEEE Robotics and Automation Letters},
+  volume  = {9},
+  number  = {6},
+  pages   = {5751--5758},
+  year    = {2024},
+  doi     = {10.1109/LRA.2024.3396108},
+  note    = {VERIFIED. Accepted manuscript fetched from Imperial College Spiral (handle 10044/1/112337): contact force never exceeds 10 N; human tutors demonstrated within a 10 N safe force boundary; F/T sensor used only for data collection and evaluation, not in the control loop; generalised to three unseen manikin body parts and two human subjects on a Baxter.}
+}
+
+@inproceedings{gu2024bimanual,
+  author    = {Gu, Yijun and Demiris, Yiannis},
+  title     = {Learning Bimanual Manipulation Policies for Bathing Bed-bound People},
+  booktitle = {2024 IEEE/RSJ International Conference on Intelligent Robots and Systems (IROS)},
+  pages     = {8936--8943},
+  year      = {2024},
+  publisher = {IEEE},
+  doi       = {10.1109/IROS58592.2024.10801478},
+  note      = {VERIFIED. Accepted manuscript fetched from Imperial Spiral (handle 10044/1/118859): MARL with a variable-impedance action space; reward-enforced safe contact-force range [5 N, 10 N]; support strengths capped at 10 N; real-world evaluation limited to forearm and upper arm because of Baxter's payload limit; medical-grade manikin, no human subjects.}
+}
+
+@inproceedings{lakshmipathy2026bathing,
+  author    = {Lakshmipathy, Arjun S. and King, Jonathan P. and Zuo, Ethan and Satishkumar, Rohit and Chen, Hongyi and Ichnowski, Jeffrey and Ding, Dan and Erickson, Zackory and Pollard, Nancy S.},
+  title     = {High Fidelity Capture, Reconstruction, and Transfer of Human Demonstrations for Robot-Assisted Bathing},
+  booktitle = {Robotics: Science and Systems XXII},
+  year      = {2026},
+  doi       = {10.15607/RSS.2026.XXII.094},
+  url       = {https://www.roboticsproceedings.org/rss22/p094.pdf},
+  note      = {VERIFIED. RSS 2026 took place in Sydney, Australia, 13--17 July 2026 (read off the fetched proceedings PDF header), so the citation is not premature. Dataset: 128 captures, ~257,000 frames, 3 trained clinicians and 6 able-bodied subjects; chest and pelvic regions excluded by IRB restriction; 65 taxels per tactile glove; reconstruction median L2 error 0.536 cm vs MoSh++ 1.714 cm; robot side = xArm 7 + DexKit soft hand on a mannequin.}
+}
+
+@article{tanczak2025softrobotics,
+  author  = {Tanczak, Natalie and Yurkewich, Aaron and Missiroli, Francesco and Wee, Seng Kwee and Kager, Simone and Choi, Hyungmin and Cho, Kyu-Jin and Yap, Hong Kai and Piazza, Cristina and Masia, Lorenzo and Lambercy, Olivier},
+  title   = {Soft Robotics in Upper Limb Neurorehabilitation and Assistance: Current Clinical Evidence and Recommendations},
+  journal = {Soft Robotics},
+  volume  = {12},
+  number  = {3},
+  pages   = {303--314},
+  year    = {2025},
+  doi     = {10.1089/soro.2024.0034},
+  note    = {VERIFIED. Europe PMC full text fetched (PMC12178277): perspective article covering 13 upper-limb devices across more than 37 clinical studies, yielding 5 recommendations. All devices reviewed are wearable.}
+}
+
+@article{ferroni2026brachial,
+  author  = {Ferroni, Roberto and Aglietta, Vittoria and Mauceri, Daniele Filippo and Carpaneto, Jacopo and Micera, Silvestro and Titolo, Paolo and Proietti, Tommaso},
+  title   = {Supporting upper limb movements with a soft robot after a brachial plexus injury},
+  journal = {Nature Communications},
+  volume  = {17},
+  number  = {1},
+  pages   = {10104},
+  year    = {2026},
+  doi     = {10.1038/s41467-026-76824-6},
+  note    = {VERIFIED; authors were missing from the source list and were recovered from the publisher's citation_author metadata. Publisher HTML fetched: pneumatic shoulder and elbow modules on a textile harness, three IMUs for kinematics-based volitional control, active gravity compensation at the shoulder. 14 adults with chronic traumatic BPI (6 complete lesions, 10 post nerve transfer); active ROM +80--180 percent; static endurance +160 percent; muscle activity -30--60 percent; ARAT +4.5 points in a subset of 4; QUEST 2.0 overall 3.8/5. Pressures, torques and device mass UNVERIFIED. Published online 2026-08-24.}
+}
+
+@article{robertson2017fascicles,
+  author  = {Robertson, Matthew A. and Sadeghi, Hamed and Florez, Juan Manuel and Paik, Jamie},
+  title   = {Soft Pneumatic Actuator Fascicles for High Force and Reliability},
+  journal = {Soft Robotics},
+  volume  = {4},
+  number  = {1},
+  pages   = {23--32},
+  year    = {2017},
+  doi     = {10.1089/soro.2016.0029},
+  note    = {VERIFIED; full text fetched from PMC5346960 (CC-BY). RECONCILIATION of the two circulating figures -- both correct, different objects, all at 200 kPa (2 bar): single unit SPA 26 N, 28 g; SPA 4Pack (four actuators) 112 N, 185 g (model predicted 122 N, measured 8.2 percent lower); multi-DoF platform of four packs 468 N cumulative (117 N average per pack) and maximum moment capacity 18.00 N.m with angular range +/-5 deg, 945 g. Bandwidth 1.958 Hz (unit), 2.028 Hz (pack), 1.327 Hz (platform). Modelled fascicle advantage +23 percent over a volumetrically equivalent single SPA, up to +50 percent. No cycle-life number is reported. Robertson and Sadeghi contributed equally. See correction robertson2019correction.}
+}
+
+@article{robertson2019correction,
+  author  = {{Soft Robotics}},
+  title   = {Correction to: Soft Pneumatic Actuator Fascicles for High Force and Reliability by Robertson MA, Sadeghi H, Florez JM, Paik J. Soft Robot 2017;4:23--32},
+  journal = {Soft Robotics},
+  volume  = {6},
+  number  = {5},
+  pages   = {685},
+  year    = {2019},
+  doi     = {10.1089/soro.2016.0029.correx},
+  note    = {Fetched from PMC6793432. Adds a missing minus sign to Equation (1) only (extension-mode sign convention); the authors state the correct formula was used for all published calculations and figures, so NO numerical result changed.}
+}
+
+@article{polygerinos2015glove,
+  author  = {Polygerinos, Panagiotis and Wang, Zheng and Galloway, Kevin C. and Wood, Robert J. and Walsh, Conor J.},
+  title   = {Soft robotic glove for combined assistance and at-home rehabilitation},
+  journal = {Robotics and Autonomous Systems},
+  volume  = {73},
+  pages   = {135--143},
+  year    = {2015},
+  doi     = {10.1016/j.robot.2014.08.014},
+  note    = {VERIFIED metadata only (Crossref + OpenAlex + Unpaywall; PII S0921889014001729). Full text could NOT be fetched -- ScienceDirect served a CAPTCHA/403 and no repository copy is exposed. All hardware numbers (blocked force, fingertip force, mass, pressure, participant count) are UNVERIFIED; do not quote them from this entry.}
+}
+
+@article{yap2017fabricglove,
+  author  = {Yap, Hong Kai and Khin, Phone May and Koh, Tze Hui and Sun, Yi and Liang, Xinquan and Lim, Jeong Hoon and Yeow, Chen-Hua},
+  title   = {A Fully Fabric-Based Bidirectional Soft Robotic Glove for Assistance and Rehabilitation of Hand Impaired Patients},
+  journal = {IEEE Robotics and Automation Letters},
+  volume  = {2},
+  number  = {3},
+  pages   = {1383--1390},
+  year    = {2017},
+  doi     = {10.1109/LRA.2017.2669366},
+  note    = {PARTIAL: cited title was truncated. Publisher-deposited abstract fetched via OpenAlex: heat-pressed and ultrasonically welded TPU-coated fabric actuators give both flexion and extension with a smaller bend radius and sufficient force/torque AT LOWER AIR PRESSURE than earlier elastomeric actuators; characterised on FIVE HEALTHY PARTICIPANTS, not patients. Specific forces, torques and pressures UNVERIFIED (paywalled).}
+}
+
+@article{wang2021wristpam,
+  author  = {Wang, Yaxi and Xu, Qingsong},
+  title   = {Design and testing of a soft parallel robot based on pneumatic artificial muscles for wrist rehabilitation},
+  journal = {Scientific Reports},
+  volume  = {11},
+  number  = {1},
+  pages   = {1273},
+  year    = {2021},
+  doi     = {10.1038/s41598-020-80411-0},
+  note    = {PARTIAL. Europe PMC full text fetched (PMC7809151): actuation is SIX evenly distributed PAM linear actuators PLUS ONE CENTRAL LINEAR ELECTRIC MOTOR (the source list omitted the motor). The parallel-kinematic arrangement is used explicitly to raise output stiffness. EMG is used for TRAINING-PROCESS EVALUATION (AAV, VAR, power-spectrum ratio Q), not as a control input. Output torque, workspace angles and tracking error UNVERIFIED; no cohort study.}
+}
+
+@article{liu2020pneumatic,
+  author  = {Liu, Quan and Zuo, Jie and Zhu, Chang and Xie, Sheng Quan},
+  title   = {Design and control of soft rehabilitation robots actuated by pneumatic muscles: State of the art},
+  journal = {Future Generation Computer Systems},
+  volume  = {113},
+  pages   = {620--634},
+  year    = {2020},
+  doi     = {10.1016/j.future.2020.06.046},
+  note    = {VERIFIED metadata; authors were missing from the source list. Closed access (Unpaywall: closed), no abstract deposited in Crossref or OpenAlex -- contents and any counts are UNVERIFIED. Related worked example by the same group: Liu et al., Hierarchical Compliance Control of a Soft Ankle Rehabilitation Robot Actuated by Pneumatic Muscles, Front. Neurorobot. 11:64, 2017, doi 10.3389/fnbot.2017.00064.}
+}
+
+@article{besharati2025assistasneeded,
+  author  = {Besharati, Alireza and Taghvaeipour, Afshin and Kamali E., Ali and Zareinejad, Mohammad},
+  title   = {Assist-as-needed control of a soft rehabilitation robot for the finger using an interaction torque observer},
+  journal = {European Journal of Control},
+  volume  = {86},
+  pages   = {101395},
+  year    = {2025},
+  doi     = {10.1016/j.ejcon.2025.101395},
+  note    = {PARTIAL; authors were missing from the source list. It is a FINGER rehabilitation robot, not a generic soft rehabilitation robot. Closed access with no OA copy and no deposited abstract, so only the title-level mechanism claim (interaction torque OBSERVER in place of a dedicated sensor) is verified; all numbers, hardware details and subject counts are UNVERIFIED. Online 2025-09-23.}
+}
+
+@article{haddadin2017collisions,
+  author  = {Haddadin, Sami and De Luca, Alessandro and Albu-Sch\"{a}ffer, Alin},
+  title   = {Robot Collisions: A Survey on Detection, Isolation, and Identification},
+  journal = {IEEE Transactions on Robotics},
+  volume  = {33},
+  number  = {6},
+  pages   = {1292--1312},
+  year    = {2017},
+  doi     = {10.1109/TRO.2017.2723903},
+  note    = {VERIFIED; author order, venue, volume, issue and pages all match the source list. Abstract fetched via OpenAlex: model-based collision detection, isolation and identification using PROPRIOCEPTIVE SENSORS ONLY, treated first for rigid robots and then extended to joint/transmission flexibility -- the flexible-joint extension is the relevant case for a compliant soft joint. No headline numbers.}
+}
+
+@article{zhu2026semanticphysical,
+  author  = {Zhu, Disha and Wang, Xuefeng and Shang, Shaomei},
+  title   = {Semantic--Physical Sensor Fusion for Safe Physical Human--Robot Interaction in Dual-Arm Rehabilitation},
+  journal = {Sensors},
+  volume  = {26},
+  number  = {5},
+  pages   = {1510},
+  year    = {2026},
+  doi     = {10.3390/s26051510},
+  note    = {PARTIAL; authors were missing from the source list. Europe PMC full text fetched (PMC12986929, PMID 41829474). LATENCY CORRECTION: the abstract says "end-to-end decision latency of approximately 223 ms on edge hardware", but the body states the 223 ms is the EDGE-LLM INFERENCE TIME (1.7B parameters) on a laptop and that "the total control loop latency is controlled within 240 ms". Other numbers: virtual torque-sensing NMAE 18.5 percent; visual pose estimation ~0.036 rad MAE; HEXMAN-MARK1 Mecanum base with two 6-DoF arms. NO HUMAN SUBJECTS -- validation used a dual-arm robot manipulating an instrumented prosthetic leg; the application is KNEE rehabilitation.}
+}
+
+@article{tang2026emarm,
+  author  = {Tang, Yifeng and Yin, Tianci and Zhang, Tieshan and Yang, Liu and Li, Gen and Ren, Hao and Ling, Zhengrong and Zhao, Haoxiang and Zhang, Ruijia and Shen, Yajing},
+  title   = {Embodied sensorimotor integration for whole-arm tactile sensing and adaptive robotic manipulation},
+  journal = {Nature Sensors},
+  volume  = {1},
+  number  = {8},
+  pages   = {681--690},
+  year    = {2026},
+  doi     = {10.1038/s44460-026-00097-1},
+  note    = {PARTIAL: the source list gave the title as "EmArm: Whole-Arm Tactile Sensing and Adaptive Robotic Manipulation", which does not exist -- "EmArm" is the system name inside this paper. Publisher page fetched for title, authors and metadata. Rigid kinematics with large-area SOFT TACTILE SKINS plus proprioception in a closed perception-action loop; claimed submillimetre tactile localization. Paywalled, so localization error, taxel count, skin area, force range, latency and subject counts are UNVERIFIED. Note: OpenAlex lists the eighth author as "Hongyun Zhao"; Crossref and the publisher's own citation_author metadata give "Haoxiang Zhao", used here. Published online 2026-07-20.}
+}

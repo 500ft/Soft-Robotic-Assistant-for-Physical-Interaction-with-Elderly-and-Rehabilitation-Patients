@@ -53,5 +53,14 @@ table. When a source is superseded, update the requirement and the section entry
 hardware-validated, no humans · **C** simulation or concept · **D** review or position ·
 **I** industry or non-peer-reviewed instrumentation source.
 
+Patents use a separate scale, since the question is whether the number resolves rather than
+how strong the evidence is: **P-VERIFIED** (number resolves and the metadata matches) ·
+**P-PARTIAL** (resolves but title, assignee, date or subject differs — state the difference)
+· **P-NOTFOUND** (does not resolve anywhere) · **P-WRONG** (resolves to something unrelated).
+
+Verify a patent against the issuing office, not Google Patents. Google Patents was wrong
+about the assignee on both Chinese patents in this repository; the corrections came from
+fetching the original CNIPA documents.
+
 Grade honestly. A review by the lab that originated the technology is a D even when its
 underlying numbers are strong; say that in the entry.

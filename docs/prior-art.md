@@ -43,6 +43,44 @@ Producing a measured envelope is a real contribution and it survives contact wit
 reviewer. It is also achievable on a senior-design calendar, which the original framing
 is not.
 
+## The patent landscape says the same thing
+
+A separate patent search (2026-09-24, [G1.md](../literature/sections/G1.md)) reached the
+gap from the other direction. Across every search run:
+
+- **Freestanding patient-handling patents are uniformly rigid** — CN111166588A (AGV
+  patient lift, rigid rake arms), JP5195569B2 (Toyota transfer device), US10596056B2
+  (five-bar parallel rehabilitation mechanism), US20240033146A1 (Ambulatus fall-arrest
+  support robot, still pending).
+- **Compliant patents are uniformly wearable** — GB2622575B (Bioliberty), WO2019223568A1
+  (HKU glove), CN110812124A (Shanghai University upper-limb suit), US11027436B2 (soft
+  grasp assistance).
+
+**Nothing occupies the intersection.** Two independent searches — academic and patent —
+found the same hole, which is a materially stronger position than either alone.
+
+### The one claim that constrains this project
+
+**GB2622575B (Bioliberty Ltd, priority 2022-09-11)** claims a *method* for estimating a
+soft actuator's volume, 3D shape, displacement and delivered force **from chamber pressure
+alone**. That claim is scale-agnostic, granted in GB and pending in EP/US. If the
+proprioception design becomes "pressure in, arm state and contact force out," the project
+needs an independent measurement channel or an explicit statement that the method is prior
+art. This is the only entry of the eight that blocks anything.
+
+**CN112263435B** (Henan Polytechnic University, granted, active in China to 2040) is the
+closest architectural match: pneumatic artificial muscles plus cables and motorised arc
+guides driving shoulder circumduction, freestanding rather than worn.
+
+## Correction: RI-MAN lifted a doll
+
+A prior-art list supplied to this project stated that RI-MAN "demonstrated lifting and
+holding a human-sized body." Verification found the source reports a **doll**, not a
+person. RI-MAN remains significant prior art for a freestanding soft-surfaced robot built
+for physical human handling, but it is not evidence that the load case was ever met.
+RIBA is the system with documented human transfer, and even its widely quoted 61 kg figure
+traces only to news coverage — see [evidence-limits.md](evidence-limits.md).
+
 ## No certification exists to point at
 
 No vendor or paper page retrieved cites a certification number against ISO 13482,

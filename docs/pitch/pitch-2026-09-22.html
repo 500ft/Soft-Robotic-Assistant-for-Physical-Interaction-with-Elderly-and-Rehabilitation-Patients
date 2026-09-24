@@ -1,0 +1,340 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Project 19 — Pitch, 22 Sep 2026</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,400;0,600;0,700;0,800;1,400;1,600&display=swap" rel="stylesheet">
+<style>
+:root{
+  --dark:#25403F; --dark-2:#2F4F4E;
+  --cream:#FAF7F1; --sand:#EDE3D8;
+  --brick:#A6432C; --salmon:#EA9A80; --sage:#7E9E85;
+  --ink:#25403F; --muted:#5E7372;
+}
+*{box-sizing:border-box}
+html,body{margin:0;padding:0;background:#111;font-family:Nunito,"Segoe UI",system-ui,-apple-system,sans-serif;color:var(--ink)}
+.deck{scroll-snap-type:y mandatory;overflow-y:auto;height:100vh}
+.slide{
+  container-type:size;
+  position:relative;
+  width:min(100vw,177.78vh); height:min(56.25vw,100vh);
+  margin:0 auto; scroll-snap-align:center;
+  display:flex; align-items:center;
+  background:var(--cream); overflow:hidden;
+}
+.pad{padding:7cqw 8cqw; width:100%}
+/* themes */
+.t-dark{background:var(--dark);color:#FAF7F1}
+.t-dark .kicker{color:var(--salmon)}
+.t-sand{background:var(--sand)}
+.t-brick{background:var(--brick);color:#FAF7F1}
+.t-brick .kicker{color:#F2C9B8}
+
+.kicker{font-size:1.45cqw;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--brick);margin:0 0 2.4cqw}
+h1{font-size:5.2cqw;line-height:1.08;font-weight:800;margin:0 0 2.5cqw;letter-spacing:-.01em}
+h2{font-size:4.6cqw;line-height:1.08;font-weight:800;margin:0 0 4cqw;letter-spacing:-.01em}
+.lead{font-size:2.35cqw;line-height:1.45;max-width:62cqw;margin:0;color:inherit}
+.t-dark .lead,.t-brick .lead{color:#DCE6E4}
+.note{font-size:1.9cqw;line-height:1.45;font-weight:700;margin:3cqw 0 0}
+.fine{font-size:1.45cqw;line-height:1.5;color:var(--muted);margin:2.2cqw 0 0}
+
+/* cards */
+.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:2cqw}
+.cards.two{grid-template-columns:repeat(2,1fr)}
+.card{background:#fff;border-radius:1.4cqw;padding:2.6cqw 2.4cqw;border:0.1cqw solid rgba(37,64,63,.08)}
+.card.sel{border:0.22cqw solid var(--brick);background:#fff}
+.card .tag{font-size:1.25cqw;letter-spacing:.16em;text-transform:uppercase;font-weight:700;color:var(--brick);margin:0 0 1.2cqw}
+.card .pill{display:inline-block;font-size:1.25cqw;font-weight:700;padding:.55cqw 1.3cqw;border-radius:2cqw;background:var(--sand);margin:0 0 1.6cqw}
+.card .pill.on{background:var(--brick);color:#fff}
+.card h3{font-size:2.5cqw;line-height:1.14;font-weight:800;margin:0 0 1.2cqw}
+.card p{font-size:1.65cqw;line-height:1.45;margin:0;color:#3D5655}
+.card p + p{margin-top:1cqw}
+
+/* table */
+table{width:100%;border-collapse:collapse;font-size:1.6cqw;line-height:1.35}
+th,td{padding:1.4cqw 1.5cqw;text-align:left;vertical-align:top}
+thead th{background:var(--dark);color:#FAF7F1;font-weight:700}
+thead th:last-child{color:var(--salmon)}
+tbody tr:nth-child(odd){background:#EFE7DC}
+tbody tr:nth-child(even){background:#fff}
+td:first-child{font-weight:700}
+td:last-child{color:var(--brick);font-weight:600}
+
+.todo{color:var(--brick);font-style:italic;font-weight:600}
+.t-dark .todo,.t-brick .todo{color:var(--salmon)}
+b,strong{font-weight:800}
+
+/* decoration */
+.circles{position:absolute;right:-4cqw;top:0;height:100%;width:42cqw;pointer-events:none}
+.circles i{position:absolute;border-radius:50%;display:block}
+.c-big{width:28cqw;height:28cqw;background:var(--dark-2);right:8cqw;top:18cqw}
+.c-small{width:15cqw;height:15cqw;background:var(--salmon);right:4cqw;top:38cqw}
+
+/* footer */
+.foot{position:absolute;left:8cqw;right:8cqw;bottom:4cqw;display:flex;justify-content:space-between;font-size:1.35cqw;color:var(--muted)}
+.t-dark .foot,.t-brick .foot{color:rgba(250,247,241,.6)}
+
+/* speaker notes */
+.notes{display:none;position:absolute;left:0;right:0;bottom:0;background:rgba(37,64,63,.95);color:#FAF7F1;
+  font-size:1.45cqw;line-height:1.5;padding:1.8cqw 8cqw}
+body.shownotes .notes{display:block}
+.notes b{color:var(--salmon)}
+
+@media print{
+  html,body{background:#fff}
+  .deck{height:auto;overflow:visible}
+  .slide{width:100%;height:100vh;page-break-after:always;break-after:page}
+  .notes{display:none!important}
+  @page{size:landscape;margin:0}
+}
+</style>
+</head>
+<body>
+<div class="deck">
+
+<!-- 1 -->
+<section class="slide t-dark">
+  <div class="circles"><i class="c-big"></i><i class="c-small"></i></div>
+  <div class="pad">
+    <p class="kicker">Senior Design · NYU Mechanical Engineering · Project 19</p>
+    <h1 style="max-width:58cqw">A Soft Robotic Assistant for Physical Interaction with Elderly and Rehabilitation Patients</h1>
+    <p class="lead" style="color:var(--salmon);font-size:2.6cqw;max-width:52cqw">Force you can measure. Bounded when the power is off.</p>
+    <p class="fine" style="color:rgba(250,247,241,.7);margin-top:6cqw">
+      Team: ASTRA &nbsp;|&nbsp; Advisor: Prof. Nana Obayashi
+    </p>
+  </div>
+  <div class="notes"><b>0:00–0:20</b> — Project 19. One sentence: we are building the arm that tells you, in newtons, how hard it is pushing on a patient.</div>
+</section>
+
+<!-- 2 -->
+<section class="slide t-brick">
+  <div class="pad">
+    <p class="kicker">The idea</p>
+    <h1 style="max-width:74cqw">Imagine leaning on a machine and knowing exactly how hard it pushes back.</h1>
+    <p class="lead" style="max-width:70cqw">A frail patient needs steadying. A rigid robot can hurt them on contact. Every soft
+    alternative we found <b>asserts</b> its contact force. None of them measure it.</p>
+  </div>
+  <div class="notes"><b>0:20–0:50</b> — Set the hook, then land the real gap: the field has demos, not instruments. Don't say "soft = safe" — slide 10 is where the argument lands.</div>
+</section>
+
+<!-- 3 -->
+<section class="slide">
+  <div class="pad">
+    <h2>The customer</h2>
+    <div class="cards">
+      <div class="card">
+        <p class="tag">Buyer</p>
+        <h3>Clinics and care facilities</h3>
+        <p>Physical therapy clinics and elder-care facilities. They are short on therapist hours, not on patients.</p>
+      </div>
+      <div class="card">
+        <p class="tag">End user</p>
+        <h3>Patients</h3>
+        <p>Need low-force steadying, guided reach and postural support — repeated hundreds of times, not once.</p>
+      </div>
+      <div class="card">
+        <p class="tag">End user</p>
+        <h3>Therapists</h3>
+        <p>One therapist, several patients. A passive gravity-balancing orthosis (T-WREX) produced sustained gains on about
+        <b>4 minutes of therapist attention per 1-hour session</b>.</p>
+      </div>
+    </div>
+    <p class="note">Patients need repetitions. Clinics need them delivered without a therapist inside every one.</p>
+  </div>
+  <div class="foot"><span>Project 19 · A Soft Robotic Assistant</span><span>3 / 10</span></div>
+  <div class="notes"><b>0:50–1:20</b> — The 4 min/session figure is the supervision budget we design to. It is <b>supervised</b> use, not unsupervised — say that out loud, it pre-empts the obvious challenge.</div>
+</section>
+
+<!-- 4 -->
+<section class="slide t-sand">
+  <div class="pad">
+    <h2>The problem and why it matters</h2>
+    <div class="cards">
+      <div class="card">
+        <p class="tag">Dose</p>
+        <h3>Therapy is rationed by therapist time</h3>
+        <p>Conventional therapy delivers a mean <b>32 upper-limb repetitions per session</b> (95% CI 20–44). Instrumented
+        protocols have hit <b>322</b>.</p>
+        <p>RATULS (n = 770) was null against <i>dose-matched</i> therapy — so the defensible thesis is dose, not kinematics.</p>
+      </div>
+      <div class="card">
+        <p class="tag">Safety</p>
+        <h3>No standard covers this contact</h3>
+        <p>ISO 13482 publishes no contact limits, and ISO/TS 15066 states it does not apply to non-industrial robots.</p>
+        <p>The pain data behind both comes from healthy young volunteers. Pressure-pain threshold drops significantly over
+        age 62 — <b>not the intended user</b>.</p>
+      </div>
+      <div class="card">
+        <p class="tag">Gap</p>
+        <h3>Nothing lives between 4 N and 600 N</h3>
+        <p>The only published compliant-arm payload we found is <b>4.4 N</b> (GummiArm). Patient-handling robots lift 60–80 kg
+        on 140–230 kg of rigid machine.</p>
+        <p>The band in between is empty.</p>
+      </div>
+    </div>
+    <p class="note">Support is needed at a force nobody has characterised, under a standard that does not cover it.</p>
+  </div>
+  <div class="foot"><span>Project 19 · A Soft Robotic Assistant</span><span>4 / 10</span></div>
+  <div class="notes"><b>1:20–2:00</b> — Three numbers only: 32 vs 322, ISO gap, 4 N–600 N empty band. All three trace to our literature matrix (169 annotated sources).</div>
+</section>
+
+<!-- 5 -->
+<section class="slide">
+  <div class="pad">
+    <h2>Existing solutions</h2>
+    <table>
+      <thead><tr>
+        <th style="width:15%">Compare</th>
+        <th>Rigid patient-handling<br>(RIBA, RoNA)</th>
+        <th>Soft freestanding humanoids<br>(HuggieBot, King Louie)</th>
+        <th>Worn exosuits<br>(Harvard soft shoulder)</th>
+        <th style="width:20%">Ours</th>
+      </tr></thead>
+      <tbody>
+        <tr><td>Assistive force</td><td>Lifts 60–80 kg</td><td>None published</td><td>6.6 N·m per limb, measured on patients</td><td>28 N, measured and reported</td></tr>
+        <tr><td>Load path</td><td>Rigid to floor, on a 140–230 kg robot</td><td>To floor, unquantified</td><td>Onto the patient's own skeleton</td><td>Rigid to floor, compliance in the actuation</td></tr>
+        <tr><td>Status</td><td>Discontinued — RIKEN-SRK closed 2015, none deployed</td><td>48 human subjects in full-body contact; force never reported</td><td>Delivering measured assistance to real patients</td><td>Bench instrument, supervised use</td></tr>
+      </tbody>
+    </table>
+    <p class="note">The freestanding soft torso is <b>not</b> empty ground — HuggieBot 2.0/3.0 is one search away. What nobody has built is the instrument.</p>
+  </div>
+  <div class="foot"><span>Project 19 · A Soft Robotic Assistant</span><span>5 / 10</span></div>
+  <div class="notes"><b>2:00–2:40</b> — Name HuggieBot before the room does. Conceding the form factor is what makes the narrower claim credible.</div>
+</section>
+
+<!-- 6 -->
+<section class="slide t-sand">
+  <div class="pad">
+    <p class="kicker">Value proposition</p>
+    <h1 style="font-size:4.3cqw;max-width:80cqw">For clinics and care facilities, a compliant support arm that delivers a
+    <i>characterised, instrumented</i> contact-force envelope for low-force steadying and guiding — measured, not asserted.</h1>
+    <div class="cards two" style="margin-top:3cqw">
+      <div class="card">
+        <h3>Unlike rigid handling robots</h3>
+        <p>A series spring makes interaction force readable from deflection, and bounds it when the actuator is unpowered.
+        For a frail user that is a stronger guarantee than "it stops fast".</p>
+      </div>
+      <div class="card">
+        <h3>Unlike the soft humanoids already built</h3>
+        <p>The deliverable is the measurement, not the hug. We publish the force envelope, the test method and the
+        conditions it holds under.</p>
+      </div>
+    </div>
+  </div>
+  <div class="foot"><span>Project 19 · A Soft Robotic Assistant</span><span>6 / 10</span></div>
+  <div class="notes"><b>2:40–3:05</b> — If asked "why is soft safer": it isn't, on impact. Compliance buys <b>measurability</b> and an <b>unpowered bound</b>. Haddadin IROS 2010 shows elasticity does not reduce peak impact force.</div>
+</section>
+
+<!-- 7 -->
+<section class="slide">
+  <div class="pad">
+    <h2>Directions we weighed</h2>
+    <div class="cards">
+      <div class="card">
+        <p class="pill">Occupied, and fails the number</p>
+        <h3>Freestanding soft torso and two arms</h3>
+        <p>HuggieBot already ran 48 subjects on it. And fully inflatable dies on <b>M = PπD³/8</b>: a Ø150 mm arm at 20 kPa
+        folds at ~26 N·m against the ~100 N·m a 200 N lean applies at 0.5 m.</p>
+      </div>
+      <div class="card">
+        <p class="pill">Crowded, wrong load path</p>
+        <h3>Soft wearable suit</h3>
+        <p>The one group delivering measured assistance to actual patients. It routes load through the patient's skeleton,
+        which is not what the brief asks for.</p>
+      </div>
+      <div class="card sel">
+        <p class="pill on">Selected</p>
+        <h3>One instrumented series-elastic support arm</h3>
+        <p>Rigid grounded load path, compliance in the actuation, designed soft covering at contact. 28 N of assist, force
+        read from spring deflection.</p>
+      </div>
+    </div>
+    <p class="fine"><span class="todo">[Final down-select confirmed with Prof. Obayashi at the next bi-weekly.]</span> Architecture choices trace to the requirements table: SEA over VSA, impedance over admittance, explicit braked hold for a sustained lean.</p>
+  </div>
+  <div class="foot"><span>Project 19 · A Soft Robotic Assistant</span><span>7 / 10</span></div>
+  <div class="notes"><b>3:05–3:40</b> — Lead with the physics, not preference. The inflatable branch is dead on a number, not on taste.</div>
+</section>
+
+<!-- 8 -->
+<section class="slide t-sand">
+  <div class="pad">
+    <h2>Scope for this academic year</h2>
+    <div class="cards">
+      <div class="card">
+        <p class="tag">1 · Design</p>
+        <h3>Down-select the actuator</h3>
+        <p>Against <b>28 N</b> and <b>≈10 N·m</b> — not the tens of N·m the brief implies. At that target, actuator families
+        that looked disqualified come back into range.</p>
+      </div>
+      <div class="card">
+        <p class="tag">2 · Build</p>
+        <h3>One instrumented arm</h3>
+        <p>Series-elastic arm on a base that reacts <b>≥330 N</b> at hand height without tipping, with an explicit braked
+        state for a sustained lean.</p>
+      </div>
+      <div class="card">
+        <p class="tag">3 · Test</p>
+        <h3>Measure the envelope</h3>
+        <p>Force output, deflection-based force estimate, contact pressure, and unpowered residual force. Plus an
+        approachability study with student volunteers.</p>
+      </div>
+    </div>
+    <p class="note" style="background:var(--dark);color:#FAF7F1;padding:2cqw 2.4cqw;border-radius:1cqw;font-weight:400;font-size:1.7cqw">
+      <b>Out of scope, deliberately:</b> sit-to-stand lift (&gt;121 N·m at the hip — a commercial lower-limb exoskeleton
+      already fails it), unsupervised operation, and contact with frail participants. This is a bench instrument, not a
+      clinical product.</p>
+  </div>
+  <div class="foot"><span>Project 19 · A Soft Robotic Assistant</span><span>8 / 10</span></div>
+  <div class="notes"><b>3:40–4:15</b> — Stating what we are <b>not</b> doing is what makes the year credible. Sit-to-stand is the first thing a reviewer will ask us to add.</div>
+</section>
+
+<!-- 9 -->
+<section class="slide">
+  <div class="pad">
+    <h2>How we will measure success</h2>
+    <table>
+      <thead><tr><th style="width:22%">Measure</th><th>How</th><th style="width:30%">Target</th></tr></thead>
+      <tbody>
+        <tr><td>Assistive force</td><td>Load cell at the contact point, compared against the force estimated from spring deflection</td><td>28 N sustained, ±6 N modulation band; deflection estimate logged against the load cell, agreement target set from first bench data</td></tr>
+        <tr><td>Contact safety</td><td>Quasi-static clamping test and a pendulum impact rig, sampled ≥10 kHz with a 100 Hz filter</td><td>Below <b>50 N/cm²</b> at the sternum (Behrens, n = 112 — not ISO's 120), margin no tighter than 30%</td></tr>
+        <tr><td>Unpowered bound</td><td>Cut power under a held lean and record residual force and motion</td><td>Bounded, non-clamping, releases</td></tr>
+        <tr><td>Approachability</td><td>Within-subjects, compliant covering on vs off, same arm and same motion. Perceived Danger as primary measure, RoSAS for approachability, GAToRS as a pre-exposure covariate, plus stop distance in cm</td><td><b>n = 32–40</b> healthy adults, preregistered before collection</td></tr>
+      </tbody>
+    </table>
+    <p class="note">Healthy adult volunteers, supervised. Contact testing with frail participants is full-board IRB and outside this calendar — we start the paperwork with our senior design professor either way.</p>
+  </div>
+  <div class="foot"><span>Project 19 · A Soft Robotic Assistant</span><span>9 / 10</span></div>
+  <div class="notes"><b>4:15–4:45</b> — Row 3 is the one to point at: slide 6's claim as a pass/fail test. If asked why n=32–40: between-subjects at d=0.5 needs 128 (Bartlett 2022); within-subjects needs ~a quarter of that, and 32–40 sits above the HRI median of 21–37 that Leichtmann flagged as the field's replicability problem.</div>
+</section>
+
+<!-- 10 -->
+<section class="slide t-dark">
+  <div class="circles"><i class="c-small" style="top:14cqw;right:14cqw"></i><i class="c-big" style="top:24cqw;right:2cqw"></i></div>
+  <div class="pad">
+    <p class="kicker">Main message</p>
+    <h1 style="max-width:56cqw">Compliance is not what makes it safe. Measurement is.</h1>
+    <p class="lead" style="max-width:52cqw">We are building the first instrumented contact-force envelope for a soft
+    assistive arm: 28 N, read from spring deflection, bounded when the power is off.</p>
+    <p class="note" style="color:var(--salmon)">Thank you. Questions?</p>
+  </div>
+  <div class="notes"><b>4:45–5:00</b> — Land it and stop. If Q&amp;A goes to "why not fully soft", the answer is one equation: M = PπD³/8.</div>
+</section>
+
+</div>
+<script>
+const slides=[...document.querySelectorAll('.slide')];
+let i=0;
+addEventListener('keydown',e=>{
+  if(e.key==='ArrowRight'||e.key==='ArrowDown'||e.key===' '){i=Math.min(i+1,slides.length-1)}
+  else if(e.key==='ArrowLeft'||e.key==='ArrowUp'){i=Math.max(i-1,0)}
+  else if(e.key==='n'){document.body.classList.toggle('shownotes');return}
+  else return;
+  e.preventDefault();slides[i].scrollIntoView({behavior:'smooth'});
+});
+addEventListener('scroll',()=>{i=slides.findIndex(s=>s.getBoundingClientRect().top>-window.innerHeight/2)},{capture:true,passive:true});
+</script>
+</body>
+</html>
