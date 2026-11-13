@@ -1,0 +1,156 @@
+{
+  "record_date": "2026-11-13",
+  "candidate_status": "scope frozen for review; sign-offs pending",
+  "repository_url": "https://github.com/500ft/Soft-Robotic-Assistant-for-Physical-Interaction-with-Elderly-and-Rehabilitation-Patients.git",
+  "review_base_HEAD": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+  "report_current_status_commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+  "report_frozen_result_commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+  "report_source_record_sha256": "a616e12f5e177c57524b9299803de9d21527cffd3766476a08ccb09bc2052e12",
+  "current_portfolio_catalog_sha256": "656e437d946ccd2bbfcbf77b20829d93a4772c3668610790b8fa2b43ee2867cc",
+  "copied_report": {
+    "repository_path": "docs/closure/attachments/soft-robotic-assistant-report-2026-11-13.pdf",
+    "sha256": "b46aae3f97d4d4f7f57ab472c09ef1d9e3f67c45f00868371aaba956e329e76c",
+    "bytes": 93079,
+    "pages_in_current_catalog": 10,
+    "original_public_href_in_catalog": "/downloads/reports/soft-robotic-assistant.pdf",
+    "copy_method": "Unchanged existing author report; retains citations/attribution; no raw third-party data copied"
+  },
+  "closure_document_sha256": "66d1d2b39fc20781d4ade4b980909e0d9c94c91085a78921415f9c5905bf8eed",
+  "source_files": [
+    {
+      "repository_path": "README.md",
+      "review_base_HEAD": {
+        "commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+        "git_blob_sha256": "f01bce625970fe468c5a585d20cc344d87fadbfdf0c1288f3ae0ceeb49976583"
+      },
+      "report_frozen_result": {
+        "commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+        "git_blob_sha256": "f01bce625970fe468c5a585d20cc344d87fadbfdf0c1288f3ae0ceeb49976583"
+      },
+      "review_worktree_sha256": "472ebb8d0820bd30ee05d6ea919c238bba732292c6576a7f61f4506d8fb3482d"
+    },
+    {
+      "repository_path": "LICENSE",
+      "review_base_HEAD": {
+        "commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+        "git_blob_sha256": "a0fa1984dbaf4338009caa1a57f970118b066e5a4aa8e85d7a96fabc1673c7c8"
+      },
+      "report_frozen_result": {
+        "commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+        "git_blob_sha256": "a0fa1984dbaf4338009caa1a57f970118b066e5a4aa8e85d7a96fabc1673c7c8"
+      },
+      "review_worktree_sha256": "953ff0ed9b3808abfa7048eacf145c718e25e18feca41eabfbdd1306c0d78cc3"
+    },
+    {
+      "repository_path": "literature/literature_matrix.csv",
+      "review_base_HEAD": {
+        "commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+        "git_blob_sha256": "f907d4e8796991aecdd39ae19c2ccbcdf6c78ce7fe5cd3c12c72079fbd3bb060"
+      },
+      "report_frozen_result": {
+        "commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+        "git_blob_sha256": "f907d4e8796991aecdd39ae19c2ccbcdf6c78ce7fe5cd3c12c72079fbd3bb060"
+      },
+      "review_worktree_sha256": "f907d4e8796991aecdd39ae19c2ccbcdf6c78ce7fe5cd3c12c72079fbd3bb060"
+    },
+    {
+      "repository_path": "literature/refs.bib",
+      "review_base_HEAD": {
+        "commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+        "git_blob_sha256": "1f827125d0ca799f048e0f4038f3019fd97eb803d703ff42b96ab79253905a69"
+      },
+      "report_frozen_result": {
+        "commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+        "git_blob_sha256": "1f827125d0ca799f048e0f4038f3019fd97eb803d703ff42b96ab79253905a69"
+      },
+      "review_worktree_sha256": "ccfd5c25420ad2e2075451e8f621607907b4301e0f0ceeed8adb65c7b638f3d5"
+    },
+    {
+      "repository_path": "docs/requirements.md",
+      "review_base_HEAD": {
+        "commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+        "git_blob_sha256": "0520960a39090e5bed6dd842ccd839636292d74179e79bac663533d4c555e155"
+      },
+      "report_frozen_result": {
+        "commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+        "git_blob_sha256": "0520960a39090e5bed6dd842ccd839636292d74179e79bac663533d4c555e155"
+      },
+      "review_worktree_sha256": "b3921ebb96a6170d12408f955d83b1b8163b35b73531f0c43f13cceb16ef6d1c"
+    },
+    {
+      "repository_path": "docs/prior-art.md",
+      "review_base_HEAD": {
+        "commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+        "git_blob_sha256": "fdad84c59ce7b8e1bcdef854e4d71b21535bf412275b1f61fadc5469d2b170c5"
+      },
+      "report_frozen_result": {
+        "commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+        "git_blob_sha256": "fdad84c59ce7b8e1bcdef854e4d71b21535bf412275b1f61fadc5469d2b170c5"
+      },
+      "review_worktree_sha256": "54ea702d43d99c866d906026d73029de9ba6e5476494d04d2c6c1728560067a3"
+    },
+    {
+      "repository_path": "docs/evidence-limits.md",
+      "review_base_HEAD": {
+        "commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+        "git_blob_sha256": "6bf81d05f957186ccd12f8c351591ff33caab2c69b866731aa3d07d64f005a86"
+      },
+      "report_frozen_result": {
+        "commit": "f3f3d3764ca2bfcfe5a1a26b466d771a885d87f9",
+        "git_blob_sha256": "6bf81d05f957186ccd12f8c351591ff33caab2c69b866731aa3d07d64f005a86"
+      },
+      "review_worktree_sha256": "c137cb306b855e67d174731d8bd3143152aacdde75604fb17d9e03d9ff01b5bf"
+    }
+  ],
+  "owner_approval": false,
+  "Claude_review_complete": false,
+  "administrative_closure_signed_off": false,
+  "previous_candidate_document_sha256": "42c946e0e01d99caf1364aa5a250850a07627d7c182f7c3bb4ac072767200bdf",
+  "original_manifest_sha256": "132c1977a9b1b42db8a8021cd4748e181a8fb13950dca1b602e73faa13cdf0cd",
+  "administrative_candidate_artifact_hashes": {
+    "README.md": "54b381d2802ea561e1498635f04211cd4801ac478a360291f8b8c13f467851b3",
+    "docs/closure/2026-11-review.md": "66d1d2b39fc20781d4ade4b980909e0d9c94c91085a78921415f9c5905bf8eed"
+  },
+  "owner_authorization": {
+    "implementation": true,
+    "draft_review_pull_request": true,
+    "decision_date": "2026-11-13",
+    "scope": "Prepare and present the frozen paper/computational scope for review; no new scientific work or formal closure approval."
+  },
+  "approval_field_meaning": "owner_approval, Claude_review_complete and administrative_closure_signed_off below refer to final closure/sign-off, not permission to prepare implementation and a draft PR.",
+  "hash_record_context": "Existing source_files hashes and report/catalog snapshot hashes are preserved from initial candidate preparation. The README pointer and closure authority wording are later administrative edits; their current identities are listed separately.",
+  "validation_update_previous_closure_document_sha256": "1bca2bce022a200f2f8b757d2fe5496d14db080f8e6a43ad7427761d5fc44bcc",
+  "contributor_validation": {
+    "platform": "Windows task-local environment",
+    "unittest": {
+      "command": "python -B -m unittest discover -s analysis/tests -v -f",
+      "exit_code": 0,
+      "tests_passed": 8,
+      "status": "PASS"
+    },
+    "coverage": {
+      "command": "python -B analysis/check_literature_coverage.py",
+      "exit_code": 0,
+      "annotated_sources": 205,
+      "bibliography_entries": 287,
+      "literature_layer_consistent": true,
+      "status": "PASS"
+    },
+    "interpretation": "Parser/coverage consistency checks, not independent citation verification or hardware evidence. No literature/matrix changed.",
+    "local_documentation_checks_complete": true,
+    "full_CI_result": "Pending; not claimed passed",
+    "log_records": [
+      {
+        "evidence_basename": "01-output.txt",
+        "sha256": "853db08909fcd66f741b30adb23481f222aad0ce11789adf887563e5b271faa7",
+        "exit_code": 0
+      },
+      {
+        "evidence_basename": "02-output.txt",
+        "sha256": "aba9df83bc54ddfad7dcc7390c81a75e45914aaeaf72804cbb88841983a069d2",
+        "exit_code": 0
+      }
+    ]
+  },
+  "review_base_context": "Source/result hashes and HEAD pins identify the pre-documentation review base. The new administrative commit does not claim to retain that same Git HEAD."
+}
