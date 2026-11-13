@@ -174,3 +174,5 @@ The search outline and the extraction schema each agent worked to are in
 ## License
 
 [MIT](LICENSE).
+
+[Scope-freeze review packet](docs/closure/2026-11-review.md) records the retained study and pending closure decision.
